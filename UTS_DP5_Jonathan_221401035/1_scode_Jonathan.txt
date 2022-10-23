@@ -2,10 +2,13 @@ program nomor1;
 uses crt;
 var
 nama, waktu:string;
+label retry;
 begin
 clrscr;
 write('Masukkan nama  : ');readln(nama);
-write('Masukkan waktu : ');readln(waktu);
+retry:write('Masukkan waktu : ');readln(waktu);
+if (waktu='Pagi') or (waktu='pagi') or (waktu= 'Siang') or (waktu='siang') or (waktu='Malam') or (waktu='malam') then
+begin
 clrscr;
 writeln('S');
 writeln('E');
@@ -16,5 +19,10 @@ writeln('A');
 writeln('T');
 writeln(waktu);
 writeln(nama);
+end
+else begin
+writeln('Tidak merupakan pagi siang atau malam, silahkan coba ulang');
+goto retry;
+end;
 readln;
 end.
