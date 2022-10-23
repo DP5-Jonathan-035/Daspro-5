@@ -1,0 +1,36 @@
+program Nomor4;
+uses crt;
+var
+diagonal,i,j,k: integer;
+begin
+clrscr;
+write('Nilai = ');
+readln(diagonal);
+clrscr;
+writeln;
+for i := 1 to diagonal do
+begin
+for j := 1 to (diagonal-i) do
+begin
+write(' ');
+end;
+for k := 1 to i do
+begin
+write(' *');
+end;
+writeln;
+end;
+for i := (diagonal-1) downto 1 do
+begin
+for j := (diagonal-i) downto 1 do
+begin
+write(' ');
+end;
+for k := 1 to i do
+begin
+write(' *');
+end;
+writeln;
+end;
+readln;
+end.

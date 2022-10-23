@@ -1,0 +1,47 @@
+program nomor3;
+uses crt;
+var
+x,y:real;
+begin
+clrscr;
+write('Masukkan titik x   : ');readln(x);
+write('Masukkan titik y   : ');readln(y);
+clrscr;
+if (x > 0) and (y > 0) then 
+begin
+writeln('Titik Anda berada di kuadran 1');
+end
+else if (x < 0) and (y > 0) then
+begin
+writeln('Titik Anda berada di kuadran 2');
+end
+else if (x < 0) and (y < 0) then
+begin
+writeln('Titik Anda berada di kuadran 3');
+end
+else if (x > 0) and (y < 0) then 
+begin
+writeln('Titik Anda berada di kuadran 4');
+end
+else if (x = 0) and (y > 0) then 
+begin
+writeln('Titik Anda berada di kuadran 1 dan 2');
+end
+else if (x = 0) and (y < 0) then 
+begin
+writeln('Titik Anda berada di kuadran 3 dan 4');
+end
+else if (x > 0) and (y = 0) then 
+begin
+writeln('Titik Anda berada di kuadran 1 dan 4');
+end
+else if (x < 0) and (y = 0) then 
+begin
+writeln('Titik Anda berada di kuadran 2 dan 3');
+end
+else 
+begin
+writeln('Titik Anda berada di (0,0)');
+end;
+readln;
+end.
